@@ -9,7 +9,7 @@ $(document).ready(function() {
       $peepCount = $peepCount - 5;
 
       if ($peepCount >= 5) {
-        for (let i = 0; i < 5; i++) {
+        for (var i = 0; i < 5; i += 1) {
           $('<img src="../assets/peeps.png" class="peep-img">').appendTo('#inventory');
         }
       } else {
