@@ -6,15 +6,15 @@ $(document).ready(function() {
     if (operand === '+') {
       $peepCount = $peepCount + 5;
     } else if (operand === '-') {
-      $peepCount = $peepCount - 5;
-
-      if ($peepCount >= 5) {
-        for (var i = 0; i < 5; i += 1) {
-          $('<img src="../assets/peeps.png" class="peep-img">').appendTo('#inventory');
-        }
-      } else {
+      if ($peepCount < 5) {
         alert('Not enough Peeps!');
+      } else {
+        $peepCount = $peepCount - 5;
       }
+    }
+
+    for (var i = 0; i < 5; i += 1) {
+      $('<img src="./assets/peeps.png" class="peep-img">').appendTo('#inventory');
     }
   };
 
